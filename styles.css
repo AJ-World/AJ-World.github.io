@@ -16,14 +16,14 @@ body {
 body {
   font-family: monospace, sans-serif;
   background-image: url('https://images.pexels.com/photos/29172403/pexels-photo-29172403.jpeg?cs=srgb&dl=pexels-steve-29172403.jpg&fm=jpg');
-  background-size: cover;       /* cover the entire viewport */
-  background-position: center;  /* center it */
-  background-repeat: no-repeat; /* don’t tile */
-  background-attachment: fixed; /* parallax effect, optional */
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
   color: #f8fafc;
   margin: 0;
   padding: 0;
-  padding-top: 70px;  /* height of navbar + some extra */
+  padding-top: 70px; 
 }
 
 body::before {
@@ -33,26 +33,26 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* adjusts darkness */
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
-  z-index: -1; /* behind all content */
+  z-index: -1; 
 }
 
 /* Navigation bar */
 
 /* Topnav styling */
 .topnav {
-  display: flex;                       /* Flex layout */
-  justify-content: center;             /* center nav links */
-  gap: 25px;                           /* spacing between links */
-  background-color: rgba(30,41,59,0.95); /* semi-transparent background */
+  display: flex;                      
+  justify-content: center;            
+  gap: 25px;                           
+  background-color: rgba(30,41,59,0.95); 
   padding: 15px;
-  position: fixed;                     /* always visible */
+  position: fixed;                    
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;                       /* above all content */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* subtle shadow */
+  z-index: 1000;                       
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
 }
 
 /* Links styling */
@@ -105,14 +105,15 @@ p {
 /* Section */
 
 section {
-  display: flex;                  /* Flex container */
-  flex-direction: column;         /* Stack children vertically */
-  justify-content: center;        /* Center vertically */
-  align-items: center;            /* Center horizontally */
-  text-align: center;             /* Center multiline text */
-  min-height: auto;              /* Full viewport height */
-  padding: 100px;                  /* Space around content */
-  box-sizing: border-box;         /* Include padding in height/width */
+  display: flex;              
+  flex-direction: column;        
+  justify-content: center;       
+  align-items: center;           
+  text-align: center;            
+  min-height: auto;             
+  padding: 100px;                 
+  box-sizing: border-box;         
+  margin-bottom: 80px;
 }
 
 .container {
@@ -122,11 +123,11 @@ section {
 }
 
 .Operating-Systems {
-  display: flex;               /* puts children in a row */
-  justify-content: center;     /* centers the row horizontally */
-  gap: 30px;                   /* space between images */
+  display: flex;               
+  justify-content: center;     
+  gap: 30px;                   
   margin-top: 30px;
-  flex-wrap: wrap;            /* space from text above */
+  flex-wrap: wrap;           
 }
 
 
@@ -145,8 +146,8 @@ section {
 
 
 .opimage {
-  width: 200px;                /* size of images */
-  height: auto;                /* keep aspect ratio */
+  width: 200px;               
+  height: auto;                
   max-width: 90vw;
 }
 
@@ -200,15 +201,15 @@ section {
   font-family: monospace;
   padding: 20px;
   border-radius: 8px;
-  width: 90%;             /* fluid width for mobile */
-  max-width: 900px;       /* max size for desktop */
+  width: 90%;             
+  max-width: 900px;      
   margin: 20px auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 .terminal-output {
-  min-height: 250px;      /* smaller min-height for mobile */
-  max-height: 60vh;       /* prevent huge terminal on small screens */
+  min-height: 250px;      
+  max-height: 60vh;       
   overflow-y: auto;
   white-space: pre-wrap;
 }
@@ -229,7 +230,7 @@ section {
   font-size: 1rem;
 }
 
-/* Optional: make terminal taller on desktop */
+
 @media (max-width: 768px) {
 
   h1 {

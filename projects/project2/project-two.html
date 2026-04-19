@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJ Schacht's Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/10456/10456439.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="topnav">
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#home">Home</a>
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#projects">Projects</a>
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#interactive">Interactive</a>
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#contact">Contact</a>
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#about">About</a>
+</nav>
+
+<section class="project-overview">
+
+  <h2 class="section-title">Secure Linux Lab Environment</h2>
+
+  <div class="overview-content">
+
+    <p>
+      This project demonstrates the creation of a secure Linux testing environment
+      designed to simulate enterprise server hardening practices. The environment
+      showcases system configuration techniques including firewall rules, SSH key
+      authentication, restricted user permissions, and automated patch management.
+    </p>
+
+    <p>
+      The lab environment was built using virtual machines to replicate a controlled
+      infrastructure where security policies and administrative workflows can be tested
+      safely without affecting production systems.
+    </p>
+
+    <p>
+      The portfolio version presents a <strong>demonstration configuration</strong>
+      showing the setup process and security concepts while avoiding exposure of
+      real infrastructure or sensitive configurations.
+    </p>
+
+  </div>
+
+</section>
+
+
+<div class="tech-section">
+
+<h2 class="section-title">Technologies Used</h2>
+
+<div class="tech-stack">
+
+<span class="tech">Linux (Ubuntu Server)</span>
+<span class="tech">UFW Firewall</span>
+<span class="tech">SSH Key Authentication</span>
+<span class="tech">Bash Scripting</span>
+<span class="tech">System Hardening</span>
+<span class="tech">Virtual Machines</span>
+
+</div>
+
+<div class="workflow-section">
+
+  <h2 class="section-title">Linux Security Configuration Workflow</h2>
+
+  <div class="workflow-steps">
+
+    <div class="workflow-step">
+      <h3>1. Server Deployment</h3>
+      <p>Provision a Linux server inside a virtual machine to simulate a controlled enterprise lab environment.</p>
+    </div>
+
+    <div class="workflow-step">
+      <h3>2. User Access Hardening</h3>
+      <p>Create restricted user accounts and configure sudo privileges to enforce proper permission management.</p>
+    </div>
+
+    <div class="workflow-step">
+      <h3>3. SSH Security Configuration</h3>
+      <p>Disable password authentication and configure SSH key-based login to secure remote access.</p>
+    </div>
+
+    <div class="workflow-step">
+      <h3>4. Firewall Policy Setup</h3>
+      <p>Configure firewall rules using UFW to allow only necessary services while blocking unauthorized traffic.</p>
+    </div>
+
+    <div class="workflow-step">
+      <h3>5. Automated Security Updates</h3>
+      <p>Enable automatic patching and update services to keep the system protected from known vulnerabilities.</p>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<section class="code-section">
+
+<h2 class="section-title">Example Security Configuration</h2>
+
+<div class="code-container">
+
+<div class="code-header">
+<span>linux-security-demo.sh</span>
+</div>
+
+<pre><code>
+# Secure Linux Lab Environment Setup (Demo)
+
+echo "Updating system packages..."
+sudo apt update && sudo apt upgrade -y
+
+echo "Installing firewall service..."
+sudo apt install ufw -y
+
+echo "Configuring firewall rules..."
+sudo ufw allow OpenSSH
+sudo ufw enable
+
+echo "Disabling password SSH login..."
+sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+
+echo "Restarting SSH service..."
+sudo systemctl restart ssh
+
+echo "Security configuration complete."
+</code></pre>
+
+</div>
+
+</section>
+
+
+
+<section class="terminal-output">
+
+<h2>Example Security Configuration Output</h2>
+
+<pre class="terminal">
+Initializing Linux Security Lab...
+
+Updating package repositories...
+[OK] System packages updated
+
+Configuring firewall rules...
+[OK] UFW enabled
+[OK] OpenSSH allowed
+
+Configuring SSH security...
+[OK] Password authentication disabled
+[OK] SSH key authentication enabled
+
+Applying system updates...
+[OK] Automatic security updates enabled
+
+Linux hardening simulation complete.
+</pre>
+
+</section>
+
+
+
+</body>
+</html>

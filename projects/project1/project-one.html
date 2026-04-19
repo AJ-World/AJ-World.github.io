@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJ Schacht's Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/10456/10456439.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="topnav">
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#home">Home</a>
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#projects">Projects</a>
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#interactive">Interactive</a>
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#contact">Contact</a>
+  <a href="file:///E:/Portfolio/Portfolio%20Webpage/index.html#about">About</a>
+</nav>
+
+<section class="project-overview">
+
+  <h2 class="section-title">Project Overview</h2>
+
+  <div class="overview-content">
+
+    <p>
+      This project demonstrates a simulated enterprise endpoint setup workflow using PowerShell.
+      The script automates common administrative tasks such as software installation checks,
+      security configuration, firewall policy application, and network resource mapping.
+    </p>
+
+    <p>
+      For security reasons, the portfolio version runs in <strong>demo mode</strong>, displaying
+      actions without modifying the system. The full implementation would perform these
+      configurations on managed enterprise endpoints in an enterprise environment.
+    </p>
+
+  </div>
+
+</section>
+
+
+<div class="tech-section">
+
+  <h2 class="tech-title">Technologies Used</h2>
+
+  <div class="tech-stack">
+    <span class="tech">PowerShell</span>
+    <span class="tech">Windows Administration</span>
+    <span class="tech">Automation</span>
+    <span class="tech">Security Policy</span>
+    <span class="tech">Enterprise IT</span>
+  </div>
+
+</div>
+
+<div class="workflow-section">
+
+  <h2 class="section-title">Endpoint Configuration Workflow</h2>
+
+  <div class="workflow-steps">
+
+    <div class="workflow-step">
+      <h3>1. System Initialization</h3>
+      <p>Script verifies the environment and confirms execution in demo mode.</p>
+    </div>
+
+    <div class="workflow-step">
+      <h3>2. Software Verification</h3>
+      <p>Checks for required enterprise software like browsers, compression tools, and VPN clients.</p>
+    </div>
+
+    <div class="workflow-step">
+      <h3>3. Security Configuration</h3>
+      <p>Applies firewall policy rules and prepares the endpoint for enterprise network access.</p>
+    </div>
+
+    <div class="workflow-step">
+      <h3>4. Endpoint Ready</h3>
+      <p>Completes the automated setup workflow and confirms configuration status.</p>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<section class="code-section">
+
+<h2>Script Logic Preview</h2>
+
+<pre><code>
+# ==========================================
+# Automated Endpoint Setup Script (Demo)
+# Author: Aron (AJ) Schacht Jr.
+# ==========================================
+
+function Install-Software {
+
+    param($SoftwareName)
+
+    Write-Host "Checking for $SoftwareName..."
+
+    # Redacted enterprise package manager logic
+    # [Production deployment configuration hidden]
+
+    Write-Host "[DEMO] Would install $SoftwareName"
+
+}
+
+Install-Software "Microsoft Teams"
+Install-Software "Google Chrome"
+
+</code></pre>
+
+<p class="code-note">
+Some implementation details are intentionally redacted. Full workflow demonstrated in a controlled test environment.
+</p>
+
+</section>
+
+
+
+<section class="terminal-output">
+
+<h2>Example Script Output</h2>
+
+<pre class="terminal">
+Starting Endpoint Setup Simulation...
+
+Checking Microsoft Teams...
+[DEMO] Installation simulated
+
+Checking Google Chrome...
+[DEMO] Installation simulated
+
+Verifying disk encryption...
+[DEMO] BitLocker would be enabled
+
+Mapping enterprise drive...
+[DEMO] Drive Z: mapped
+
+Endpoint setup simulation complete.
+</pre>
+
+</section>
+
+
+
+</body>
+</html>

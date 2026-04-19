@@ -1,0 +1,208 @@
+/* Reset default browser spacing */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Page styling */
+
+body {
+  font-family: monospace, sans-serif;
+  background-image: url('https://images.pexels.com/photos/29172403/pexels-photo-29172403.jpeg?cs=srgb&dl=pexels-steve-29172403.jpg&fm=jpg');
+  background-size: cover;       /* cover the entire viewport */
+  background-position: center;  /* center it */
+  background-repeat: no-repeat; /* don’t tile */
+  background-attachment: fixed; /* parallax effect, optional */
+  color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;  /* height of navbar + some extra */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* adjusts darkness */
+  backdrop-filter: blur(5px);
+  z-index: -1; /* behind all content */
+}
+
+/* Navigation bar */
+
+/* Topnav styling */
+.topnav {
+  display: flex;                       /* Flex layout */
+  justify-content: center;             /* center nav links */
+  gap: 25px;                           /* spacing between links */
+  background-color: rgba(30,41,59,0.95); /* semi-transparent background */
+  padding: 15px;
+  position: fixed;                     /* always visible */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;                       /* above all content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* subtle shadow */
+}
+
+/* Links styling */
+.topnav a {
+  text-decoration: none;
+  color: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+  background-color: #0ea5e9; /* hover highlight */
+  color: white;
+}
+
+/* Smooth scrolling for links */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Active link */
+
+.topnav a.active {
+  background-color: #3b82f6;
+  border-radius: 5px;
+}
+
+
+/* Title */
+
+h1 {
+  margin-top: 120px;
+  font-size: 48px;
+  letter-spacing: 1px;
+}
+
+
+/* Subtitle */
+
+p {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #94a3b8;
+}
+
+
+/* Section */
+
+section {
+  display: flex;                  /* Flex container */
+  flex-direction: column;         /* Stack children vertically */
+  justify-content: center;        /* Center vertically */
+  align-items: center;            /* Center horizontally */
+  text-align: center;             /* Center multiline text */
+  min-height: 100vh;              /* Full viewport height */
+  padding: 40px;                  /* Space around content */
+  box-sizing: border-box;         /* Include padding in height/width */
+}
+
+.Operating-Systems {
+  display: flex;               /* puts children in a row */
+  justify-content: center;     /* centers the row horizontally */
+  gap: 30px;                   /* space between images */
+  margin-top: 30px;
+  flex-wrap: wrap;            /* space from text above */
+}
+
+.opimage {
+  width: 200px;                /* size of images */
+  height: auto;                /* keep aspect ratio */
+  max-width: 90vw;
+}
+
+/* Card styling */
+.project-card {
+  display: block;                   
+  width: 300px;
+  padding: 20px;
+  margin: 15px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  color: #f8fafc;
+  text-decoration: none;           
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+/*terminal stuff*/
+
+.dynamic-terminal {
+  background-color: #0f172a;
+  color: #00ff9c;
+  font-family: monospace;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 300px;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.terminal-window {
+  background-color: #0f172a;
+  color: #00ff9c;
+  font-family: monospace;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;             /* fluid width for mobile */
+  max-width: 900px;       /* max size for desktop */
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.terminal-output {
+  min-height: 250px;      /* smaller min-height for mobile */
+  max-height: 60vh;       /* prevent huge terminal on small screens */
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.terminal-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.command-input {
+  background: none;
+  border: none;
+  color: #00ff9c;
+  outline: none;
+  flex: 1;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+/* Optional: make terminal taller on desktop */
+@media(min-width: 768px) {
+  .terminal-output {
+    min-height: 300px;
+    max-height: 70vh;
+  }
+
+  .command-input {
+    font-size: 1.1rem;
+  }
+}

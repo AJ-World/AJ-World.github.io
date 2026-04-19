@@ -6,13 +6,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --bg-dark: rgba(15, 23, 42, 0.75);
-  --card-bg: rgba(255, 255, 255, 0.08);
-  --accent: #0ea5e9;
-  --text: #f8fafc;
-  --muted: #94a3b8;
-}
 
 body {
   font-family: monospace, sans-serif;

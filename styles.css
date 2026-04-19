@@ -140,15 +140,9 @@ section {
 
 #about p {
   max-width: 750px;
-  line-height: 1.6;
-  font-size: 18px;
-  color: var(--muted);
 }
 
 #about {
-  background: var(--bg-dark);
-  border-radius: 12px;
-  padding: 50px 20px;
   max-width: 900px;
 }
 

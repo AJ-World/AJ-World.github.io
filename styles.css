@@ -118,7 +118,7 @@ section {
   align-items: center;            /* Center horizontally */
   text-align: center;             /* Center multiline text */
   min-height: auto;              /* Full viewport height */
-  padding: 40px;                  /* Space around content */
+  padding: 100px;                  /* Space around content */
   box-sizing: border-box;         /* Include padding in height/width */
 }
 

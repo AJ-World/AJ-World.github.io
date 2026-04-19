@@ -136,6 +136,31 @@ section {
   flex-wrap: wrap;            /* space from text above */
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 20px;
+}
+
+
+#about p {
+  max-width: 750px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+#about {
+  background: var(--bg-dark);
+  border-radius: 12px;
+  padding: 50px 20px;
+  max-width: 900px;
+}
+
+
 .opimage {
   width: 200px;                /* size of images */
   height: auto;                /* keep aspect ratio */
@@ -144,21 +169,20 @@ section {
 
 /* Card styling */
 .project-card {
-  display: block;                   
-  width: 300px;
+  display: block;
   padding: 20px;
-  margin: 15px;
-  background-color: rgba(255,255,255,0.1);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  color: #f8fafc;
-  text-decoration: none;           
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: var(--card-bg);
+  border-radius: 12px;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.12);
 }
 
 /*terminal stuff*/
@@ -213,13 +237,22 @@ section {
 }
 
 /* Optional: make terminal taller on desktop */
-@media(min-width: 768px) {
-  .terminal-output {
-    min-height: 300px;
-    max-height: 70vh;
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 32px;
   }
 
-  .command-input {
-    font-size: 1.1rem;
+  .topnav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 50px 15px;
   }
 }

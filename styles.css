@@ -136,14 +136,6 @@ section {
   flex-wrap: wrap;            /* space from text above */
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1100px;
-  margin-top: 20px;
-}
 
 
 #about p {

@@ -111,8 +111,9 @@ section {
   align-items: center;           
   text-align: center;            
   min-height: auto;             
-  padding: 100px;                 
-  box-sizing: border-box;         
+  padding: 70px 20px;                
+  box-sizing: border-box;   
+  margin-bottom: 80px;
 }
 
 .container {

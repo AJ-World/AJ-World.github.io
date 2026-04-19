@@ -6,6 +6,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-dark: rgba(15, 23, 42, 0.75);
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --accent: #0ea5e9;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+}
+
+body {
+  font-family: monospace, sans-serif;
+}
 
 /* Page styling */
 
@@ -106,9 +117,15 @@ section {
   justify-content: center;        /* Center vertically */
   align-items: center;            /* Center horizontally */
   text-align: center;             /* Center multiline text */
-  min-height: 100vh;              /* Full viewport height */
+  min-height: auto;              /* Full viewport height */
   padding: 40px;                  /* Space around content */
   box-sizing: border-box;         /* Include padding in height/width */
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .Operating-Systems {

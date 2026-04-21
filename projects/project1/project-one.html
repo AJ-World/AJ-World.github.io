@@ -96,19 +96,23 @@
 # ==========================================
 
 function Install-Software {
-
-    param($SoftwareName)
+    param(
+        [string]$SoftwareName
+    )
 
     Write-Host "Checking for $SoftwareName..."
 
-    # Enterprise deployment logic omitted for safety and demo clarity
-    # In production, this would integrate with:
-    # - Intune / MDM tooling
-    # - Software deployment policies
-    # - Endpoint compliance checks
+    $InstalledSoftware = Get-ItemProperty `
+        HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* `
+        -ErrorAction SilentlyContinue |
+        Where-Object { $_.DisplayName -like "*$SoftwareName*" }
 
-    Write-Host "[DEMO] Would install $SoftwareName"
-
+    if ($InstalledSoftware) {
+        Write-Host "$SoftwareName is already installed."
+    }
+    else {
+        Write-Host "[DEMO] $SoftwareName would be installed here."
+    }
 }
 
 Install-Software "Microsoft Teams"

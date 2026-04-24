@@ -37,9 +37,8 @@
     </p>
 
     <p>
-      The portfolio version presents a <strong>demonstration configuration</strong>
-      showing the setup process and security concepts while avoiding exposure of
-      real infrastructure or sensitive configurations.
+    This environment was built and tested in a controlled virtual machine to safely apply and validate real security configurations. 
+    All outputs displayed below were generated from live system commands after hardening the system.
     </p>
 
   </div>
@@ -139,31 +138,56 @@ echo "Security configuration complete."
 
 <section class="terminal-output">
 
-<h2>Example Security Configuration Output</h2>
+<h2 class="section-title">System Security Validation (Live VM Evidence)</h2>
 
+<p>
+The following outputs were collected from the hardened Linux virtual machine after applying SSH and firewall configurations.
+</p>
+
+<h3>SSH Hardening Verification</h3>
 <pre class="terminal">
-Initializing Linux Security Lab...
+passwordauthentication no
+permitrootlogin no
+</pre>
 
-Updating package repositories...
-[OK] System packages updated
+<h3>Firewall Status</h3>
+<pre class="terminal">
+Status: active
+Default: deny (incoming), allow (outgoing)
 
-Configuring firewall rules...
-[OK] UFW enabled
-[OK] OpenSSH allowed
+22/tcp (OpenSSH) ALLOW IN Anywhere
+</pre>
 
-Configuring SSH security...
-[OK] Password authentication disabled
-[OK] SSH key authentication enabled
-
-Applying system updates...
-[OK] Automatic security updates enabled
-
-Linux hardening simulation complete.
+<h3>Open Ports Audit</h3>
+<pre class="terminal">
+tcp LISTEN 0 128 0.0.0.0:22
+tcp LISTEN 0 128 [::]:22
 </pre>
 
 </section>
 
+  <!--Gallery-->
+<section class="evidence-section">
 
+<h2 class="section-title">Visual Evidence (VM Screenshots)</h2>
+
+<p>
+Screenshots captured directly from the virtual machine during configuration and validation.
+</p>
+
+<div class="screenshot-grid">
+
+  <img src="images/ssh-config.png" alt="SSH configuration showing disabled password authentication">
+  
+  <img src="images/ufw-status.png" alt="UFW firewall active with OpenSSH allowed">
+  
+  <img src="images/open-ports.png" alt="Open ports showing only SSH listening">
+  
+  <img src="images/sshd-verify.png" alt="sshd runtime configuration verification">
+
+</div>
+
+</section>
 
 </body>
 </html>

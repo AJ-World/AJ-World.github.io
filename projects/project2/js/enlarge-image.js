@@ -1,4 +1,4 @@
-<script>
+
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeBtn = document.querySelector(".lightbox-close");
@@ -17,4 +17,3 @@
   lightbox.onclick = () => {
     lightbox.style.display = "none";
   };
-</script>

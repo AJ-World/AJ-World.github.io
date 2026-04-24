@@ -1,3 +1,8 @@
+/* =========================
+   PROJECT 2 LIGHTBOX 
+========================= */
+
+if (document.querySelector(".screenshot-grid")) {
 
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
@@ -17,3 +22,4 @@
   lightbox.onclick = () => {
     lightbox.style.display = "none";
   };
+}

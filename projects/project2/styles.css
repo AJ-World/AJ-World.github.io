@@ -273,3 +273,31 @@ opacity:0.8;
   font-size:18px;
   color:#cbd5f5;
 }
+
+
+/* Screenshot gallery */
+
+.evidence-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.screenshot-grid img:hover {
+  transform: scale(1.03);
+}

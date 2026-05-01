@@ -29,9 +29,8 @@
     </p>
 
     <p>
-      For security reasons, the portfolio version runs in <strong>demo mode</strong>, displaying
-      actions without modifying the system. The full implementation would perform these
-      configurations on managed enterprise endpoints in an enterprise environment.
+      This project was developed and tested in a controlled environment using PowerShell to simulate enterprise endpoint configuration workflows. 
+      Core logic was validated through system queries and conditional checks to reflect real administrative tasks without modifying the host system.
     </p>
 
   </div>
@@ -97,7 +96,8 @@
 
 function Install-Software {
     param(
-        [string]$SoftwareName
+    [Parameter(Mandatory=$true)]
+    [string]$SoftwareName
     )
 
     Write-Host "Checking for $SoftwareName..."
@@ -111,7 +111,7 @@ function Install-Software {
         Write-Host "$SoftwareName is already installed."
     }
     else {
-        Write-Host "[DEMO] $SoftwareName would be installed here."
+        Write-Host "[SIMULATION] In production, this would trigger software deployment via Intune or software distribution tools."
     }
 }
 
@@ -130,24 +130,25 @@ Some implementation details are intentionally redacted. Full workflow demonstrat
 
 <section class="terminal-output">
 
-<h2>Example Script Output</h2>
+<h2 class="section-title">System Validation (Script Execution Output)</h2>
 
+<p>
+The following output demonstrates how the script checks for installed software using system registry queries.
+</p>
+
+<h3>Software Verification</h3>
 <pre class="terminal">
-Starting Endpoint Setup Simulation...
+Checking for Microsoft Teams...
+Microsoft Teams is already installed.
 
-Checking Microsoft Teams...
-[DEMO] Installation simulated
+Checking for Google Chrome...
+Google Chrome is already installed.
+</pre>
 
-Checking Google Chrome...
-[DEMO] Installation simulated
-
-Verifying disk encryption...
-[DEMO] BitLocker would be enabled
-
-Mapping enterprise drive...
-[DEMO] Drive Z: mapped
-
-Endpoint setup simulation complete.
+<h3>Script Behavior</h3>
+<pre class="terminal">
+If software is not found:
+Software would be installed here.
 </pre>
 
 </section>

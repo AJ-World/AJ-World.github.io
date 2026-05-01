@@ -89,8 +89,6 @@
 <h2>Script Logic Preview</h2>
 
 <pre><code>
-# ==========================================
-# Automated Endpoint Setup Script (Demo)
 # Author: Aron (AJ) Schacht Jr.
 # ==========================================
 
@@ -99,7 +97,7 @@ function Install-Software {
     [Parameter(Mandatory=$true)]
     [string]$SoftwareName
     )
-
+    $DoRealInstall = $false
     Write-Host "Checking for $SoftwareName..."
 
     $InstalledSoftware = Get-ItemProperty `
@@ -111,7 +109,13 @@ function Install-Software {
         Write-Host "$SoftwareName is already installed."
     }
     else {
-        Write-Host "[SIMULATION] In production, this would trigger software deployment via Intune or software distribution tools."
+        if ($DoRealInstall) {
+            Write-Host "Installing $SoftwareName..."
+            winget install $SoftwareName
+        }
+        else {
+            Write-Host "[SIMULATION] In production, this would trigger software deployment via Intune or software distribution tools."
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 /* =========================
-   PROJECT 2 LIGHTBOX 
+   PROJECT 1 LIGHTBOX 
 ========================= */
 
 if (document.querySelector(".screenshot-grid")) {
